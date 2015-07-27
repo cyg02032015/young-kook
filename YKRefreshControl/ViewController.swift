@@ -30,7 +30,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         return 20
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell!
         cell.textLabel!.text = "测试"
         return cell
     }

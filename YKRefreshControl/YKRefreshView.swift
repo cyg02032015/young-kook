@@ -31,7 +31,7 @@ public class YKRefreshView: UIView {
 //            println("oldValue: \(oldValue) newValue: \(state)")
             switch state {
             case .Refreshing:
-                UIView.animateWithDuration(0.5, delay: 0.0, options: [.AllowUserInteraction,.BeginFromCurrentState], animations: { () -> Void in
+                UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.AllowUserInteraction | UIViewAnimationOptions.BeginFromCurrentState, animations: { () -> Void in
                     let top = self.scrollViewInsetsDefaultValue.top + RefreshViewH;
                     self.scrollView.contentInset.top = top;
                     self.scrollView.contentOffset.y = -top;
@@ -79,14 +79,11 @@ public class YKRefreshView: UIView {
         if scrollView.dragging {
             if self.state == .None && offSetY < normal2pullingOffsetY {
                 self.state = .BeginRefresh
-                println("BeginRefresh-----")
             } else if self.state == .BeginRefresh && offSetY >= normal2pullingOffsetY {
                 self.state = .None
-                println("None------------")
             }
         } else if self.state == .BeginRefresh && scrollView.dragging == false{
         self.state = .Refreshing
-        println("Refreshing-------")
         }
     }
     override init(frame: CGRect) {
@@ -103,7 +100,6 @@ public class YKRefreshView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     public override func willMoveToSuperview(newSuperview: UIView!) {
-        //        super.willMoveToSuperview(newSuperview)
         superview?.removeObserver(self, forKeyPath: KVO_KEYPATH, context: nil)
         if let asScrollView = newSuperview as? UIScrollView {
             asScrollView.addObserver(self, forKeyPath: KVO_KEYPATH, options: .Initial, context: nil)
