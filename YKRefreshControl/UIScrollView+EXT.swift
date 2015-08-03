@@ -20,11 +20,15 @@ extension UIScrollView {
         }
     }
     
-    func addRefreshControl(action: ()->()) -> Void {
-        let ykRefresh = YKRefreshView(frame: CGRect(x: 0, y: -RefreshViewH, width: UIScreen.mainScreen().bounds.width, height: RefreshViewH))
+    func addHeaderViewWithClosure(action: ()->()){
+        let ykRefresh = YKRefreshHeaderView(frame: CGRect(x: 0, y: -RefreshViewH, width: ScreenWidth, height: RefreshViewH))
         ykRefresh.tag = 100
         addSubview(ykRefresh)
         ykRefresh.action = action
+    }
+    func addFooterViewWithClosure(action: ()->()) {
+        let ykFooterView = YKRefreshFotterView(frame: CGRect(x: 0, y: frame.size.height, width: ScreenWidth, height: RefreshViewH))
+        addSubview(ykFooterView)
     }
     func startRefresh(){
         ykRefreshView!.startRefreshing()

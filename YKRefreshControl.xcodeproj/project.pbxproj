@@ -17,6 +17,8 @@
 		D8546A781B53D1AC00B04CA6 /* YKRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8546A771B53D1AC00B04CA6 /* YKRefreshView.swift */; };
 		D8546A7A1B5418DF00B04CA6 /* UIScrollView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8546A791B5418DF00B04CA6 /* UIScrollView+EXT.swift */; };
 		D8A399611B5F63B7002415B6 /* YKNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A399601B5F63B7002415B6 /* YKNavigationController.swift */; };
+		D8CE01F51B68C57600DCA0BD /* YKRefreshFotterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE01F41B68C57600DCA0BD /* YKRefreshFotterView.swift */; };
+		D8CE01F71B68C59300DCA0BD /* YKRefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE01F61B68C59300DCA0BD /* YKRefreshHeaderView.swift */; };
 		D8DF68371B5CE1260091693B /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF68361B5CE1260091693B /* GlobalConstant.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D82F93AD1B6F493C0074D691 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		D8546A501B53C77700B04CA6 /* YKRefreshControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKRefreshControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8546A541B53C77700B04CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8546A551B53C77700B04CA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +48,8 @@
 		D8546A771B53D1AC00B04CA6 /* YKRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKRefreshView.swift; sourceTree = "<group>"; };
 		D8546A791B5418DF00B04CA6 /* UIScrollView+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+EXT.swift"; sourceTree = "<group>"; };
 		D8A399601B5F63B7002415B6 /* YKNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKNavigationController.swift; sourceTree = "<group>"; };
+		D8CE01F41B68C57600DCA0BD /* YKRefreshFotterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKRefreshFotterView.swift; sourceTree = "<group>"; };
+		D8CE01F61B68C59300DCA0BD /* YKRefreshHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKRefreshHeaderView.swift; sourceTree = "<group>"; };
 		D8DF68361B5CE1260091693B /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,8 +94,11 @@
 				D8546A551B53C77700B04CA6 /* AppDelegate.swift */,
 				D8A399601B5F63B7002415B6 /* YKNavigationController.swift */,
 				D8546A571B53C77700B04CA6 /* ViewController.swift */,
+				D82F93AD1B6F493C0074D691 /* MyPlayground.playground */,
 				D8546A791B5418DF00B04CA6 /* UIScrollView+EXT.swift */,
 				D8546A771B53D1AC00B04CA6 /* YKRefreshView.swift */,
+				D8CE01F61B68C59300DCA0BD /* YKRefreshHeaderView.swift */,
+				D8CE01F41B68C57600DCA0BD /* YKRefreshFotterView.swift */,
 				D8DF68361B5CE1260091693B /* GlobalConstant.swift */,
 				D8546A751B53CCB600B04CA6 /* GCDDelay.swift */,
 				D8546A591B53C77700B04CA6 /* Main.storyboard */,
@@ -228,12 +236,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CE01F71B68C59300DCA0BD /* YKRefreshHeaderView.swift in Sources */,
 				D8DF68371B5CE1260091693B /* GlobalConstant.swift in Sources */,
 				D8A399611B5F63B7002415B6 /* YKNavigationController.swift in Sources */,
 				D8546A781B53D1AC00B04CA6 /* YKRefreshView.swift in Sources */,
 				D8546A581B53C77700B04CA6 /* ViewController.swift in Sources */,
 				D8546A561B53C77700B04CA6 /* AppDelegate.swift in Sources */,
 				D8546A7A1B5418DF00B04CA6 /* UIScrollView+EXT.swift in Sources */,
+				D8CE01F51B68C57600DCA0BD /* YKRefreshFotterView.swift in Sources */,
 				D8546A761B53CCB600B04CA6 /* GCDDelay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

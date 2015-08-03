@@ -6,13 +6,16 @@
 //  Copyright © 2015年 SK. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
-let KVO_KEYPATH: String = "contentOffset"
-var KVO_CONTEXT = "kvo_context"
+let KVO_CONTENTOFFSET: String = "contentOffset"
+let KVO_CONTEXT = "kvo_context"
+let KVO_CONTENTSIZE = "contentsize"
+let KVO_PANSTATE = "pan.state"
 
+let ScreenWidth: CGFloat = UIScreen.mainScreen().bounds.width
 
-func println<T>(message: T) {
-    print(message, appendNewline: true)
-}
+//func println<T>(message: T) {
+//    print(message, appendNewline: true)
+//}
