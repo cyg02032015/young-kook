@@ -22,15 +22,15 @@ public class YKRefreshHeaderView: YKRefreshView {
             if oldValue == state {return}
             switch state {
             case .Refreshing:
-                UIView.animateWithDuration(0.5, delay: 0.0, options: .AllowUserInteraction | .BeginFromCurrentState, animations: { () -> Void in
+                UIView.animateWithDuration(0.5, delay: 0.0, options: [.AllowUserInteraction,.BeginFromCurrentState], animations: { () -> Void in
                     let top = self.scrollViewInsetsDefaultValue.top + RefreshViewH;
                     self.scrollView.contentInset.top = top;
                     self.scrollView.contentOffset.y = -top;
                     self.setTitle("正在刷新...", forState: YKRefreshControlState.Refreshing)
                     }, completion: { (finish) -> Void in
-                        if self.action != nil {
+//                        if self.action != nil {
                             self.action()
-                        }
+//                        }
                 })
                 break
             case .BeginRefresh:
@@ -100,16 +100,17 @@ public class YKRefreshHeaderView: YKRefreshView {
         }
     }
     //MARK: KVO监听
-    public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if let scr = object as? UIScrollView {
-            if self.state == .Refreshing {
-                return
-            }
-            if keyPath == KVO_CONTENTOFFSET {
-                adjustStateWithContentOffset()
-            }
-        }
+  public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    if let scr = object as? UIScrollView {
+      if self.state == .Refreshing {
+        return
+      }
+      if keyPath == KVO_CONTENTOFFSET {
+        adjustStateWithContentOffset()
+      }
     }
+  }
+
     public override func startRefreshing() {
         self.state = .Refreshing
     }

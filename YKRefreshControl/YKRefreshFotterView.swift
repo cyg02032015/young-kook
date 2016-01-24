@@ -60,7 +60,8 @@ public class YKRefreshFotterView: YKRefreshView {
         scrollView.removeObserver(self, forKeyPath: KVO_CONTENTSIZE, context: nil)
         scrollView.removeObserver(self, forKeyPath: KVO_PANSTATE, context: nil)
     }
-    public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        
-    }
+
+  public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    
+  }
 }

@@ -34,7 +34,7 @@ public class YKRefreshView: UIView {
         }
     }
     deinit {
-        println("observed remove")
+        print("observed remove")
         scrollView?.removeObserver(self, forKeyPath: KVO_CONTENTOFFSET, context: nil)
         scrollView = nil
     }

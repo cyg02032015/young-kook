@@ -30,7 +30,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         }
         tableView.startRefresh()
         tableView.addFooterViewWithClosure { () -> () in
-            println("下边的")
+            print("下边的")
         }
     }
     
